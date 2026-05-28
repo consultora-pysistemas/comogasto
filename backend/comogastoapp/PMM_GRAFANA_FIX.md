@@ -14,7 +14,7 @@ Por defecto, Grafana corre en **puerto 3000** dentro del contenedor.
 
 ### 2. Mapear Puerto de Grafana en docker-compose.yml
 
-Agregaun nuevo servicio o expón el puerto directamente:
+Agrega un nuevo servicio o expón el puerto directamente:
 
 ```bash
 # Opción A: Verificar si ya está expuesto
