@@ -1,8 +1,8 @@
-  #!/usr/bin/env bash
-  set -e
+#!/usr/bin/env bash
+set -e
 
-  echo "Stopping ComoGastoApp Platform..."
+echo "Stopping ComoGastoApp Platform..."
 
-  docker compose down
+docker compose down
 
-  echo "ComoGastoApp Platform stopped."
+echo "ComoGastoApp Platform stopped."
