@@ -35,3 +35,19 @@ topics:
 
 health:
 	sh scripts/healthcheck.sh
+
+pmm-up:
+	docker compose up -d pmm-server
+
+pmm-logs:
+	docker compose logs pmm-server -f
+
+pmm-status:
+	docker compose ps pmm-server
+
+pmm-down:
+	docker compose down -v pmm-server
+
+pmm-url:
+	@echo "Percona PMM available at: http://localhost:${PMM_SERVER_PORT}"
+	@echo "Credentials: admin / admin"
