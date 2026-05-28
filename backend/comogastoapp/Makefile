@@ -1,4 +1,4 @@
-include .env
+-include .env
 
 up:
 	docker compose up -d
