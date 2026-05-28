@@ -148,5 +148,5 @@ Se pueden configurar en **Alerting** → **Alert Rules** (futuro)
 
 ---
 
-✨ **¡PMM está listo para monitoreoSu infraestructura está bajo control!**
+✨ **¡PMM está listo para monitoreo. Su infraestructura está bajo control!**
 
