@@ -6,15 +6,15 @@ Tu entorno está **100% operacional** con todos los componentes críticos funcio
 
 ### Tabla de Accesos
 
-| Servicio | URL | Puerto | Usuario | Contraseña | Notas |
-|----------|-----|--------|---------|-----------|-------|
-| **PostgreSQL Primary** | localhost | **5448** | postgres | asdf | Escritura + Replicación |
-| **PostgreSQL Replica** | localhost | **5449** | postgres | asdf | Lectura (standby) |
-| **Kafka Broker** | localhost | **9092** | — | — | KRaft (sin Zookeeper) |
-| **Kafka UI** | http://localhost:**8085** | 8085 | — | — | Interfaz gráfica |
-| **Redis** | localhost | **6379** | — | comogasto-app-redis | Cache distribuido |
-| **PMM Server** | http://localhost:**8443** | 8443 | admin | admin | Monitoreo PostgreSQL |
-| **Portainer** | http://localhost:**9000** | 9000 | admin | admin | Gestión Docker |
+| Servicio               | URL                       | Puerto   | Usuario  | Contraseña          | Notas                   |
+|------------------------|---------------------------|----------|----------|---------------------|-------------------------|
+| **PostgreSQL Primary** | localhost                 | **5448** | postgres | asdf                | Escritura + Replicación |
+| **PostgreSQL Replica** | localhost                 | **5449** | postgres | asdf                | Lectura (standby)       |
+| **Kafka Broker**       | localhost                 | **9092** | —        | —                   | KRaft (sin Zookeeper)   |
+| **Kafka UI**           | http://localhost:**8085** | 8085     | —        | —                   | Interfaz gráfica        |
+| **Redis**              | localhost                 | **6379** | —        | comogasto-app-redis | Cache distribuido       |
+| **PMM Server**         | http://localhost:**8443** | 8443     | admin    | admin               | Monitoreo PostgreSQL    |
+| **Portainer**          | http://localhost:**9000** | 9000     | admin    | admin               | Gestión Docker          |
 
 ---
 
@@ -39,13 +39,13 @@ make ps
 
 ## 📖 Documentación
 
-| Documento | Ruta | Descripción |
-|-----------|------|-------------|
-| **PostgreSQL Access** | `POSTGRES_ACCESS.md` | Guía de conexión a BD |
-| **PMM Quickstart** | `PMM_QUICKSTART.md` | Configurar monitoreo |
-| **PMM Agent Running** | `PMM_AGENT_RUNNING.md` | Troubleshooting de PMM |
-| **PMM Setup Detallado** | `docs/PMM_SETUP.md` | Guía completa de monitoreo |
-| **Decisiones Arquitectónicas** | `docs/decisiones/` | ADR-001 a ADR-004 |
+| Documento                      | Ruta                   | Descripción                |
+|--------------------------------|------------------------|----------------------------|
+| **PostgreSQL Access**          | `POSTGRES_ACCESS.md`   | Guía de conexión a BD      |
+| **PMM Quickstart**             | `PMM_QUICKSTART.md`    | Configurar monitoreo       |
+| **PMM Agent Running**          | `PMM_AGENT_RUNNING.md` | Troubleshooting de PMM     |
+| **PMM Setup Detallado**        | `docs/PMM_SETUP.md`    | Guía completa de monitoreo |
+| **Decisiones Arquitectónicas** | `docs/decisiones/`     | ADR-001 a ADR-004          |
 
 ---
 

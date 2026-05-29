@@ -2,11 +2,11 @@
 
 ## Puertos
 
-| Instancia | Host | Puerto | Usuario | Contraseña |
-|-----------|------|--------|---------|-----------|
-| **Primary** | localhost | **5448** | postgres | asdf |
-| **Replica** | localhost | **5449** | postgres | asdf |
-| **Replicactor** | (interno) | 5432 | comogastoapp-replicator | asdf |
+| Instancia       | Host      | Puerto   | Usuario                 | Contraseña |
+|-----------------|-----------|----------|-------------------------|------------|
+| **Primary**     | localhost | **5448** | postgres                | asdf       |
+| **Replica**     | localhost | **5449** | postgres                | asdf       |
+| **Replicactor** | (interno) | 5432     | comogastoapp-replicator | asdf       |
 
 ## Conexión desde tu máquina
 

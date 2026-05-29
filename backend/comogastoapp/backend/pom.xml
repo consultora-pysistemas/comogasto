@@ -10,6 +10,17 @@
     <artifactId>backend</artifactId>
     <name>Archetype - backend</name>
     <url>http://maven.apache.org</url>
+    <modules>
+        <module>commons/common-web</module>
+        <module>commons/common-security</module>
+        <module>commons/common-events</module>
+        <module>commons/common-jpa</module>
+        <module>commons/common-outbox</module>
+        <module>commons/common-inbox</module>
+        <module>commons/common-audit</module>
+        <module>commons/common-tracing</module>
+        <module>common-observability</module>
+    </modules>
     <properties>
         <java.version>21</java.version>
         <spring.boot.version>4.0.0</spring.boot.version>
