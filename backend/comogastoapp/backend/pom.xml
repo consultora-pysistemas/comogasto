@@ -19,7 +19,14 @@
         <module>commons/common-inbox</module>
         <module>commons/common-audit</module>
         <module>commons/common-tracing</module>
-        <module>common-observability</module>
+        <module>commons/common-observability</module>
+        <module>starters/comogasto-starter-web</module>
+        <module>starters/comogasto-starter-security</module>
+        <module>starters/comogasto-starter-events</module>
+        <module>starters/comogasto-starter-jpa</module>
+        <module>starters/comogasto-starter-audit</module>
+        <module>starters/comogasto-starter-tracing</module>
+        <module>starters/comogasto-starter-observability</module>
     </modules>
     <properties>
         <java.version>21</java.version>
