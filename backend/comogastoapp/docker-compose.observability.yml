@@ -1,0 +1,60 @@
+services:
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: comoGasto-prometheus
+    restart: unless-stopped
+    ports:
+      - "${PROMETHEUS_PORT}:9090"
+    volumes:
+      - ./infra/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus_data:/prometheus
+    networks:
+      - comoGasto-net
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: comoGasto-grafana
+    restart: unless-stopped
+    ports:
+      - "${GRAFANA_PORT}:3000"
+    environment:
+      GF_SECURITY_ADMIN_USER: admin
+      GF_SECURITY_ADMIN_PASSWORD: admin
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./infra/grafana/provisioning:/etc/grafana/provisioning
+    networks:
+      - comoGasto-net
+
+  otel-collector:
+    image: otel/opentelemetry-collector-contrib:latest
+    container_name: comoGasto-otel-collector
+    restart: unless-stopped
+    command: ["--config=/etc/otelcol-contrib/config.yml"]
+    ports:
+      - "${OTEL_COLLECTOR_GRPC_PORT}:4317"
+      - "${OTEL_COLLECTOR_HTTP_PORT}:4318"
+    volumes:
+      - ./infra/otel-collector/config.yml:/etc/otelcol-contrib/config.yml
+    networks:
+      - comoGasto-net
+
+  jaeger:
+    image: jaegertracing/all-in-one:latest
+    container_name: comoGasto-jaeger
+    restart: unless-stopped
+    ports:
+      - "${JAEGER_PORT}:16686"
+      - "14250:14250"
+    environment:
+      COLLECTOR_OTLP_ENABLED: "true"
+    networks:
+      - comoGasto-net
+
+volumes:
+  prometheus_data:
+  grafana_data:
+
+networks:
+  comoGasto-net:
+    external: true
